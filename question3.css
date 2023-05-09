@@ -1,0 +1,118 @@
+* {
+    margin: 0%;
+    bottom: 0%;
+}
+.options {
+    position: absolute;
+    bottom: 0%;
+    margin-left: -5%;
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+}
+.options-option {
+    white-space: nowrap;
+    position: relative;
+    bottom: -5px;
+    display: inline-block;
+    margin-left: 9%;
+}
+.option1, .option2, .option3, .option4 {
+    margin-right: 40px;
+    cursor: pointer;
+}
+.option1:hover {
+    margin-bottom: 5px;
+}
+.option2:hover {
+    margin-bottom: 5px;
+}
+.option3:hover {
+    margin-bottom: 5px;
+}
+.option4:hover {
+    margin-bottom: 5px;
+}
+/* div img:hover {
+    margin-bottom: 1px;
+} */
+@media (max-width: 1000px) {
+    .options {
+      display: none;
+    }
+}
+
+@keyframes slide {
+    0% {
+      opacity: 1; 
+      transform: translateX(-100%); 
+    }
+    100% {
+      opacity: 1; 
+      transform: translateX(calc(100% + 100vw)); 
+    }
+}
+  
+.slider {
+    overflow: hidden; /* 隐藏超出部分 */
+    width: 100%; 
+}
+.screen {
+    color: blue;
+    font-family: helvetica, sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+    /* padding-bottom: 20px; */
+    padding-top: 0px;
+    /* text-align: center; */
+    /* text-transform: none; */
+}
+.screen {
+    display: inline-block; /* 将文本包裹在内联元素中 */
+    white-space: nowrap; /* 防止文本换行 */
+    animation: slide 12s linear infinite;
+}
+.screen {
+    visibility: hidden;
+}
+  
+@media (max-width: 1500px) {
+    .screen {
+      visibility: visible; 
+    }
+}
+@media (max-height: 700px) {
+    .screen {
+      visibility: visible; 
+    }
+}
+.discription {
+    color: #999;
+    font-family: helvetica, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    text-transform: none;
+    position: absolute;
+    bottom: 50%;
+    right: 20%;
+}
+@keyframes shake {
+    0% {
+        right: 21%;
+    }
+    50% {
+        right: 19%;
+    }
+    100% {
+        right: 21%;
+    }
+}
+.discription {
+    animation-name: shake;
+    animation-duration: .8s;
+    animation-iteration-count: infinite;
+}

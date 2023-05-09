@@ -1,0 +1,103 @@
+.logo {
+    display: block;
+    margin: 0 auto;
+    margin-top: 90px;
+    margin-bottom: 10px;
+    max-width: 100%;
+}
+.slogan {
+    color: #333;
+    font-family: helvetica, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    text-transform: none;
+}
+.slogan2 {
+    color: #999;
+    font-family: helvetica, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+    text-transform: none;
+}
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.start {
+    border-style: solid;
+    border-radius: 50px;
+    border-width: 1.5px;
+    color: #FF3D00;
+    background-color: #f2f2f2;
+    border-color: blue;
+    font-size: 20px;
+    margin-top: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    cursor: pointer;
+    transition: 0.15s ease-in-out;
+}
+.start:hover {
+    background-color: blue;
+    color: #F2AB42;
+    margin-top: 45px;
+    box-shadow: 0px 2px 5px 1px rgba(86, 86, 86, 0.2);
+}
+
+@keyframes slide {
+    0% {
+      opacity: 1; 
+      transform: translateX(-100%); 
+    }
+    100% {
+      opacity: 1; 
+      transform: translateX(calc(100% + 100vw)); 
+    }
+  }
+  
+.slider {
+    overflow: hidden; /* 隐藏超出部分 */
+    width: 100%; 
+}
+.screen {
+    color: blue;
+    font-family: helvetica, sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+    /* padding-bottom: 20px; */
+    padding-top: 0px;
+    /* text-align: center; */
+    /* text-transform: none; */
+}
+.screen {
+    display: inline-block; /* 将文本包裹在内联元素中 */
+    white-space: nowrap; /* 防止文本换行 */
+    animation: slide 12s linear infinite;
+}
+.screen {
+    visibility: hidden;
+}
+  
+@media (max-width: 1500px) {
+    .screen {
+      visibility: visible; 
+    }
+}
+@media (max-height: 700px) {
+    .screen {
+      visibility: visible; 
+    }
+}
